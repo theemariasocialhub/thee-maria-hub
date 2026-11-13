@@ -1,0 +1,171 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>THEE MARIA SOCIAL HUB</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236d28d9'/%3E%3Cstop offset='1' stop-color='%236366f1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0f24;--bg2:#101839;--cd:#151e47;--ln:#28336a;--tx:#f5f6ff;--mu:#a0a9d6;--pu:#8b5cf6;--lv:#c4b5fd;--ok:#34d399;--wn:#fbbf24;--er:#f87171;--gr:linear-gradient(135deg,#6d28d9,#a855f7 55%,#6366f1);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 15px/1.55 Sora,system-ui,sans-serif;padding-bottom:calc(88px + env(safe-area-inset-bottom,0px));overflow-x:hidden;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--lv);outline-offset:2px}
+.w{max-width:1120px;margin:0 auto;padding:0 16px}
+.demo{background:#2b1f5c;color:var(--lv);font-size:12px;text-align:center;padding:6px 10px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(10,15,36,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln)}
+header .w{display:flex;align-items:center;gap:10px;height:56px}
+.logo{font-weight:800;font-size:15px;letter-spacing:.2px;display:flex;align-items:center;gap:8px;white-space:nowrap;min-width:0;flex:0 1 auto}
+.logo i{width:28px;height:28px;border-radius:9px;background:var(--gr);display:grid;place-items:center;font-style:normal;font-size:14px}
+nav.d{display:none;gap:18px;margin-left:auto;color:var(--mu)}nav.d a:hover{color:var(--tx)}
+.sp{flex:1}
+.cur{display:flex;background:var(--cd);border:1px solid var(--ln);border-radius:99px;padding:2px}
+.cur button{border:0;background:none;padding:4px 10px;border-radius:99px;font-size:12px;cursor:pointer;color:var(--mu)}
+.cur button.on{background:var(--pu);color:#fff}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(16,24,57,.96);backdrop-filter:blur(14px);border-top:1px solid var(--ln);display:flex;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+.tabs a{flex:1;text-align:center;font-size:11px;color:var(--mu);padding:4px 0;position:relative}.tabs a b{display:block;font-size:19px;font-weight:400}.tabs a.on{color:var(--lv)}
+.bd{position:absolute;top:0;left:55%;background:var(--pu);color:#fff;border-radius:99px;font-size:10px;padding:0 5px}
+.hero{padding:34px 0 26px;background:radial-gradient(600px 300px at 85% -10%,rgba(139,92,246,.35),transparent),radial-gradient(500px 300px at 0 20%,rgba(99,102,241,.2),transparent)}
+h1{font-size:clamp(30px,8.4vw,58px);line-height:1.05;margin:0 0 14px;font-weight:800;letter-spacing:-1px}
+.shim{background:linear-gradient(90deg,#fff,#c4b5fd,#a855f7,#fff);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:-250% 0}}
+.lead{color:var(--mu);max-width:520px;margin:0 0 18px}
+.sb{display:flex;gap:8px;background:var(--cd);border:1px solid var(--ln);border-radius:14px;padding:6px;max-width:560px}
+.sb input{flex:1;min-width:0;background:none;border:0;padding:8px 10px;outline:0}
+.btn{border:0;border-radius:12px;padding:10px 16px;background:var(--gr);color:#fff;font-weight:600;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{box-shadow:0 6px 22px rgba(139,92,246,.45)}.btn:active{transform:scale(.97)}
+.btn.g{background:var(--cd);border:1px solid var(--ln)}.btn:disabled{opacity:.45;cursor:not-allowed}
+.stats{display:flex;gap:18px;margin-top:20px;color:var(--mu);font-size:13px;flex-wrap:wrap}
+h2{font-size:22px;margin:30px 0 12px}h3{margin:0 0 6px;font-size:16px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--ln);background:var(--cd);border-radius:99px;padding:7px 14px;font-size:13px;cursor:pointer;color:var(--mu)}
+.chip.on{background:var(--pu);border-color:var(--pu);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.pc{background:var(--cd);border:1px solid var(--ln);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}.pc:hover{transform:translateY(-3px);border-color:var(--pu)}
+.im{height:84px;display:grid;place-items:center;font-size:30px;font-weight:800;color:#fff;position:relative}
+.im small{position:absolute;left:8px;bottom:5px;font-size:10px;font-weight:400;opacity:.8}
+.pb{padding:10px;display:flex;flex-direction:column;gap:6px;flex:1}.pb h3{font-size:14px;margin:0}
+.pr{font-weight:800}.pr s{display:block;font-weight:400;color:var(--mu);font-size:11px;text-decoration:none}
+.st{font-size:11px;padding:2px 8px;border-radius:99px;align-self:flex-start;background:rgba(52,211,153,.14);color:var(--ok)}.st.l{background:rgba(251,191,36,.14);color:var(--wn)}.st.u{background:rgba(248,113,113,.14);color:var(--er)}
+.sec{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sc{background:var(--cd);border:1px solid var(--ln);border-radius:16px;padding:14px;cursor:pointer}.sc b{font-size:26px;display:block}.sc span{color:var(--mu);font-size:12px}
+.box{background:var(--cd);border:1px solid var(--ln);border-radius:16px;padding:14px;margin-bottom:10px}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between}
+input.i,select.i,textarea.i{width:100%;background:var(--bg2);border:1px solid var(--ln);border-radius:10px;padding:10px;margin:4px 0 10px}
+label{font-size:13px;color:var(--mu)}
+.pk{display:block;border:1.5px solid var(--ln);border-radius:14px;padding:12px;margin-bottom:8px;cursor:pointer}.pk.on{border-color:var(--pu);background:rgba(139,92,246,.12)}
+.nt{font-size:12px;color:var(--mu);border-left:3px solid var(--pu);padding-left:10px;margin:10px 0}
+.bar{height:8px;background:var(--bg2);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--gr);transition:width .8s}
+.ch{display:flex;align-items:flex-end;gap:8px;height:130px}.ch i{flex:1;background:var(--gr);border-radius:6px 6px 0 0;transform-origin:bottom;animation:gw .8s both}
+@keyframes gw{from{transform:scaleY(0)}}
+.kp{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.kp .box b{font-size:20px;display:block}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px;min-width:480px}td,th{padding:8px 6px;border-bottom:1px solid var(--ln);text-align:left}
+details{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:12px;margin-bottom:8px}summary{cursor:pointer;font-weight:600}
+.wa{position:fixed;right:14px;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:25;width:50px;height:50px;border-radius:50%;background:#25d366;display:grid;place-items:center;font-size:24px;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.toast{position:fixed;left:50%;bottom:calc(130px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--pu);padding:9px 16px;border-radius:12px;z-index:40;animation:tp .25s both}
+@keyframes tp{from{opacity:0;transform:translate(-50%,10px)}}
+footer{border-top:1px solid var(--ln);margin-top:36px;padding:24px 0;color:var(--mu);font-size:13px}
+.v{animation:fi .35s both}@keyframes fi{from{opacity:0;transform:translateY(8px)}}
+@media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr)}.sec{grid-template-columns:repeat(5,1fr)}.kp{grid-template-columns:repeat(4,1fr)}nav.d{display:flex}.tabs{display:none}body{padding-bottom:0}.wa{bottom:20px}.two{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}.im{height:100px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.logo i{flex:none;position:relative;overflow:hidden}.logo i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.logo span{overflow:hidden;text-overflow:ellipsis}.logo em{font-style:normal}.cb{padding:6px 10px;flex:none;white-space:nowrap}.cur{flex:none}.cur button{padding:4px 9px}
+.grid{gap:12px}.pc{border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.im{height:112px;display:grid;place-items:center;background:radial-gradient(circle at 30% 15%,color-mix(in srgb,var(--c,#6d28d9) 60%,#0a0f24),#0e1536 85%)}
+.im.big{height:180px;border-radius:20px;margin:10px 0}
+.lg{display:grid;place-items:center;border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.4),inset 0 0 0 1px rgba(255,255,255,.18);flex:none;line-height:1}
+.tg{position:absolute;top:8px;left:8px;font-size:10px;background:rgba(10,15,36,.6);padding:2px 8px;border-radius:99px;color:var(--lv)}
+.vw{font-size:11px;color:var(--lv);margin-top:auto}.pb{padding:12px;gap:8px}
+.tabs a{min-height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center}.tabs a b{line-height:1.1}.bd{left:50%;margin-left:8px}
+@media(max-width:430px){.logo em{display:none}}
+@media(max-width:360px){header .w{gap:6px}.cur button{padding:4px 7px}.logo{font-size:13px}.grid,.sec,.kp{gap:8px}.pb{padding:10px}h1{font-size:28px}.w{padding:0 12px}}
+@media(min-width:760px){.im{height:128px}}
+</style></head><body>
+<div class="demo">Demo frontend — sample products and prices only. No payments are taken and no data is saved.</div>
+<header><div class="w"><a class="logo" href="#home"><i><img src="logo.png" alt="" onload="this.parentNode.style.fontSize='0'" onerror="this.remove()">✦</i><span>THEE MARIA <em>SOCIAL HUB</em></span></a><nav class="d"><a href="#shop">Services</a><a href="#faq">FAQ</a><a href="#dashboard">Account</a><a href="#admin">Admin</a></nav><span class="sp"></span><div class="cur" id="cur"></div><a href="#cart" class="btn g cb" aria-label="Cart">🛒 <span id="cc">0</span></a></div></header>
+<main id="app" class="w"></main>
+<footer><div class="w"><b>THEE MARIA SOCIAL HUB</b><p>Lawful digital services for Nigeria and the world. We never sell shared, stolen or transferred accounts, and never ask for your passwords or OTPs.</p><p><a href="#faq">FAQ</a> · <a href="#faq">Privacy</a> · <a href="#faq">Terms</a> · <a href="#faq">Refunds</a></p></div></footer>
+<a class="wa" href="https://wa.me/" aria-label="WhatsApp support" title="Set your WhatsApp number in Stage 5">💬</a>
+<nav class="tabs" id="tabs"></nav>
+<script src="config.js"></script>
+<script>
+const S=[["Social media services","📱"],["Communication & messaging","💬"],["Entertainment & streaming","🎬"],["Dating platforms","💞"],["Business & digital tools","🧰"]];
+const N="Facebook,Instagram,TikTok,Snapchat,X (Twitter),LinkedIn,Reddit,Pinterest,Threads,Tumblr,YouTube,Twitch,Telegram,WhatsApp Business,Discord,Google Voice,Gmail,Outlook,Google Workspace,Zoom,Netflix,Spotify,Disney+,YouTube Premium,Amazon Prime Video,Apple Music,Tinder,Bumble,Badoo,Hinge,OkCupid,Plenty of Fish,Canva,Shopify,Microsoft 365,Website development,Digital marketing,Graphic design,SEO services,Social media advertising".split(",");
+const T=[[["Profile & page setup",15000,12,"1–2 days"],["Content pack (12 posts)",35000,28,"3–5 days"],["Advertising assistance",60000,45,"3–7 days"]],[["Setup & configuration",10000,8,"1 day"],["Migration service",25000,20,"2–4 days"],["Monthly management",45000,35,"Ongoing"]],[["Subscription assistance",5000,4,"Same day"],["Official gift card (where permitted)",8000,6,"Under 1 hour"],["Plan advice & setup help",12000,9,"1 day"]],[["Profile creation assistance",8000,6,"1 day"],["Profile optimisation",15000,12,"1–2 days"],["Photo & bio guidance",20000,16,"2 days"]],[["Starter",30000,22,"3–5 days"],["Standard",85000,65,"1–2 weeks"],["Pro",200000,150,"2–4 weeks"]]];
+const SI=[0,12,20,26,32,40],D=["profile setup, page management, content and advertising help","legitimate setup, configuration, migration and management","authorized subscriptions and official gift cards only","profile creation and optimisation through authorized channels","professional digital services delivered by our team"];
+const P=N.map((n,i)=>{const s=SI.findIndex((v,k)=>i>=v&&i<SI[k+1]),m=1+(i%4)*.1;return{id:i,n,s,h:(i*47)%360,st:n=="Google Voice"?"Region-limited":i%7==3?"Limited":"Available",d:`${n}: ${D[s]}. Demo listing.`,k:T[s].map(p=>({n:p[0],a:Math.round(p[1]*m/500)*500,u:Math.round(p[2]*m),t:p[3]}))}});
+const BR=[["#1877f2","📘"],["#e1306c","📸"],["#111","🎵"],["#fffc00","👻"],["#000","✖️"],["#0a66c2","💼"],["#ff4500","👽"],["#e60023","📌"],["#101010","🧵"],["#36465d","📝"],["#ff0000","▶️"],["#9146ff","🎮"],["#26a5e4","✈️"],["#25d366","💬"],["#5865f2","🎧"],["#1a73e8","📞"],["#ea4335","✉️"],["#0078d4","📧"],["#4285f4","🏢"],["#2d8cff","🎥"],["#e50914","🎬"],["#1db954","🎶"],["#113ccf","🏰"],["#ff0000","⏯️"],["#00a8e1","📺"],["#fa243c","🍎"],["#fe3c72","🔥"],["#ffc629","🐝"],["#783bf9","💜"],["#1a1a1a","💞"],["#0500ff","💘"],["#00a0dc","🐟"],["#00c4cc","🎨"],["#95bf47","🛍️"],["#d83b01","🪟"],["#6d28d9","🌐"],["#a855f7","📈"],["#ec4899","✏️"],["#10b981","🔎"],["#f59e0b","📣"]];
+/* To use official logos: add LOGOS["Instagram"]="data:image/svg+xml;base64,..." (from each brand’s press kit). */
+const LOGOS={},esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const BRN={};N.forEach((n,i)=>BRN[n.toLowerCase()]=BR[i]);
+const bz=p=>{const n=(p.n||"").toLowerCase(),k=BRN[n]?n:Object.keys(BRN).find(x=>n.length>2&&x.length>3&&(n.includes(x)||x.includes(n)));return BRN[k]||["#6d28d9","✦"]};
+const popular=()=>{const r=["Facebook","Instagram","TikTok","Canva","Netflix","Spotify","Website development","SEO services"].map(n=>P.find(p=>p.n==n)).filter(Boolean);P.forEach(p=>{if(r.length<8&&!r.includes(p))r.push(p)});return r};
+const lg=(p,z)=>LOGOS[p.n]?`<img class="lg" alt="${esc(p.n)} logo" src="${LOGOS[p.n]}" width="${z}" height="${z}">`:`<span class="lg" role="img" aria-label="${esc(p.n)} icon" style="background:${bz(p)[0]};color:${["#fffc00","#ffc629"].includes(bz(p)[0])?"#111":"#fff"};width:${z}px;height:${z}px;font-size:${Math.round(z*.5)}px">${bz(p)[1]}</span>`;
+let sb=null,cur="NGN",q="",sec=-1,sel=0,cart=[],user=null,dt="orders",orders=[{id:"TM-DEMO1",it:"Instagram — Profile & page setup",a:15000,u:12,s:"Processing",p:"Paid (demo)"},{id:"TM-DEMO2",it:"Canva — Starter",a:30000,u:22,s:"Pending",p:"Unpaid (demo)"}];
+try{cart=JSON.parse(localStorage.getItem("tm-cart")||"[]")}catch(e){}
+const $=s=>document.querySelector(s),m=(a,u)=>cur=="NGN"?"₦"+a.toLocaleString():"$"+u,lo=p=>p.k[0]||{a:0,u:0,n:"Contact us",t:"—"},fr=p=>!p.k.length?"Ask for price":`From ${m(lo(p).a,lo(p).u)}<s>${cur=="NGN"?"$"+lo(p).u:"₦"+lo(p).a.toLocaleString()}</s>`;
+const stc=p=>p.st=="Available"?"":p.st=="Unavailable"?"u":"l";
+function save(){try{localStorage.setItem("tm-cart",JSON.stringify(cart))}catch(e){}$("#cc").textContent=cart.length}
+function toast(t){const e=document.createElement("div");e.className="toast";e.textContent=t;document.body.append(e);setTimeout(()=>e.remove(),1800)}
+function card(p){return`<a class="pc" href="#p-${p.id}"><div class="im" style="--c:${bz(p)[0]}">${lg(p,52)}<span class="tg">${S[p.s][1]} ${S[p.s][0].split(" ")[0]}</span></div><div class="pb"><h3>${p.n}</h3><span class="st ${stc(p)}">${p.st}</span><div class="pr">${fr(p)}</div><span class="vw">${p.k.length} packages · View details</span></div></a>`}
+function renderList(){const r=P.filter(p=>(sec<0||p.s==sec)&&p.n.toLowerCase().includes(q.toLowerCase()));$("#gr").innerHTML=r.length?r.map(card).join(""):`<p>No services match “${esc(q)}”. Try another name or clear the filter.</p>`}
+function chips(){return`<div class="chips"><button class="chip ${sec<0?"on":""}" onclick="sec=-1;go()">All 40</button>${S.map((x,i)=>`<button class="chip ${sec==i?"on":""}" onclick="sec=${i};go()">${x[1]} ${x[0]}</button>`).join("")}</div>`}
+const V={
+home:()=>`<section class="hero v"><h1><span class="shim">Grow, connect and stream — the lawful way.</span></h1><p class="lead">Profile setup, business tools, subscriptions and creative services for Nigeria and worldwide. Pay in ₦ or $.</p><div class="sb"><input id="hq" placeholder="Search 40 services, e.g. Instagram" onkeydown="if(event.key=='Enter')hs()"><button class="btn" onclick="hs()">Search</button></div><div class="stats"><span>✔ No account resale</span><span>✔ Verified payments</span><span>✔ WhatsApp support</span></div></section>
+<h2>Browse by category</h2><div class="sec">${S.map((x,i)=>`<div class="sc" onclick="sec=${i};location.hash='shop'"><b>${x[1]}</b>${x[0]}<br><span>${P.filter(p=>p.s==i).length} services</span></div>`).join("")}</div>
+<h2>Popular services</h2><div class="grid">${popular().map(card).join("")}</div>
+<h2>Special offer</h2><div class="box" style="background:var(--gr)"><b>Welcome10</b> — 10% off your first order. <small>(Demo coupon, not active.)</small></div>
+<h2>Why choose us</h2><div class="grid">${[["🔒","Secure checkout","Orders are confirmed only after server-side verification."],["✅","Authorized only","Official subscriptions and gift cards. No shared accounts."],["🕵️","Privacy first","We never ask for passwords, OTPs or recovery codes."],["💬","Human support","Chat with us on WhatsApp or open a ticket."]].map(x=>`<div class="box"><b style="font-size:24px">${x[0]}</b><h3>${x[1]}</h3><span style="color:var(--mu);font-size:13px">${x[2]}</span></div>`).join("")}</div>
+<h2>Customer reviews</h2><div class="box">Real reviews from verified customers will appear here after launch. We don’t publish made-up testimonials.</div>
+<h2>Newsletter</h2><div class="sb"><input placeholder="you@example.com" type="email"><button class="btn" onclick="toast('Demo only — not subscribed')">Subscribe</button></div>`,
+shop:()=>`<h2 class="v">Services</h2><div class="sb" style="margin-bottom:10px"><input id="sq" value="${esc(q)}" placeholder="Search services" oninput="q=this.value;renderList()"></div>${chips()}<p style="color:var(--mu)">${S[sec]?S[sec][0]:"All categories"}</p><div class="grid v" id="gr"></div>`,
+p:i=>{if(!P[i])return'<div class="box v" style="margin-top:14px">Service not found. <a href="#shop" style="color:var(--lv)">Browse all services</a></div>';const p=P[i],k=p.k[sel]||p.k[0],ok=p.st!="Unavailable"&&p.k.length>0;return`<div class="v" style="padding-top:14px"><a href="#shop" style="color:var(--mu)">← All services</a><div class="two"><div><div class="im big" style="--c:${bz(p)[0]}">${lg(p,88)}<small>Demo product image</small></div></div><div><h2 style="margin-top:10px">${p.n}</h2><span class="st ${stc(p)}">${p.st}</span><p style="color:var(--mu)">${p.d}</p>${p.k.map((x,j)=>`<label class="pk ${j==sel?"on":""}" onclick="sel=${j};go()"><div class="row"><b>${x.n}</b><b>${m(x.a,x.u)}</b></div><small>${cur=="NGN"?"$"+x.u:"₦"+x.a.toLocaleString()} · Delivery: ${x.t}</small></label>`).join("")}<button class="btn" style="width:100%" ${ok?"":"disabled"} onclick="add(${i})">Add to cart</button><p class="nt">${p.s==2||p.s==3?"Subscriptions and gift cards are supplied through authorized channels only. We never sell shared or third-party accounts.":"We never ask for your account password or OTP. Delivery starts after verified payment."}${p.n=="Google Voice"?" Google Voice is limited to supported regions and eligible users.":""}</p></div></div></div>`},
+cart:()=>{const t=cart.reduce((a,c)=>[a[0]+P[c.p].k[c.k].a,a[1]+P[c.p].k[c.k].u],[0,0]);return`<h2 class="v">Your cart</h2>${cart.length?cart.map((c,j)=>{const p=P[c.p],k=p.k[c.k];return`<div class="box row"><div><b>${p.n}</b><br><small>${k.n}</small></div><div style="text-align:right"><b>${m(k.a,k.u)}</b><br><a href="javascript:void 0" onclick="cart.splice(${j},1);save();go()" style="color:var(--er);font-size:12px">Remove</a></div></div>`}).join("")+`<div class="box row"><b>Total</b><b>${m(t[0],t[1])}</b></div><a class="btn" style="display:block;text-align:center" href="#checkout">Go to checkout</a>`:`<div class="box">Your cart is empty. <a href="#shop" style="color:var(--lv)">Browse services</a></div>`}`},
+checkout:()=>{const t=cart.reduce((a,c)=>[a[0]+P[c.p].k[c.k].a,a[1]+P[c.p].k[c.k].u],[0,0]);return`<h2 class="v">Checkout</h2><div class="box"><label>Full name</label><input class="i" id="cn" value="${user?esc(user.n):""}"><label>Email</label><input class="i" id="ce" type="email" value="${user?esc(user.e):""}"><label>Payment method</label><select class="i"><option>Paystack — cards, bank transfer (NGN)</option><option>International gateway (USD)</option></select><p class="nt">Demo: no payment is taken. In Stage 5 an order is marked paid only after server-side Paystack verification — never from a browser redirect.</p><div class="row"><b>Total ${m(t[0],t[1])}</b><button class="btn" ${cart.length?"":"disabled"} onclick="place(${t[0]},${t[1]})">Place demo order</button></div></div>`},
+login:()=>auth("Log in"),register:()=>auth("Create account"),
+dashboard:()=>{if(!user)return auth("Log in");const T=["orders","payments","tickets","alerts","profile"],stp=["Pending","Processing","Completed"];return`<h2 class="v">Hi, ${esc(user.n)}</h2><div class="chips">${T.map(x=>`<button class="chip ${dt==x?"on":""}" onclick="dt='${x}';go()">${x[0].toUpperCase()+x.slice(1)}</button>`).join("")}</div><div class="v" style="margin-top:10px">${dt=="orders"?orders.map(o=>`<div class="box"><div class="row"><b>${o.id}</b><span class="st l">${o.s}</span></div>${o.it}<div class="bar" style="margin:8px 0"><i style="width:${(stp.indexOf(o.s)+1)*33.3}%"></i></div><small>${m(o.a,o.u)} · ${o.p}</small></div>`).join(""):dt=="payments"?orders.map(o=>`<div class="box row"><span>${o.id}</span><span>${m(o.a,o.u)} · ${o.p}</span></div>`).join(""):dt=="tickets"?`<div class="box">No open tickets. <button class="btn g" onclick="toast('Demo only')">New ticket</button></div>`:dt=="alerts"?`<div class="box">Welcome to the hub (demo notification).</div>`:`<div class="box">${esc(user.n)}<br>${esc(user.e)}<br><button class="btn g" onclick="out()">Log out</button></div>`}</div>`},
+admin:()=>{if(sb&&(!user||user.role!="admin"))return'<div class="box v">Admin access only. This is enforced by database policies, not just this screen.</div>';const B=[40,62,48,80,66,95,72];return`<h2 class="v">Admin dashboard <small style="color:var(--wn)">demo data</small></h2><div class="kp v">${[["Total sales","₦1.8M"],["Customers","214"],["Orders",orders.length+" new"],["Pending","7"],["Completed","58"],["Cancelled","3"],["Revenue ₦","₦1.8M"],["Revenue $","$1,240"]].map(x=>`<div class="box"><small>${x[0]}</small><b>${x[1]}</b></div>`).join("")}</div><div class="box"><b>Weekly sales</b><div class="ch" style="margin-top:10px">${B.map(h=>`<i style="height:${h}%"></i>`).join("")}</div></div><h3>Orders</h3><div class="box tw"><table><tr><th>ID</th><th>Item</th><th>Status</th></tr>${orders.map((o,j)=>`<tr><td>${o.id}</td><td>${o.it}</td><td><select class="i" style="margin:0;padding:4px" onchange="setSt(${j},this.value)">${["Pending","Processing","Completed","Cancelled","Refunded"].map(s=>`<option ${s==o.s?"selected":""}>${s}</option>`).join("")}</select></td></tr>`).join("")}</table></div><h3>Services (first 8)</h3><div class="box tw"><table>${P.slice(0,8).map(p=>`<tr><td>${p.n}</td><td>${m(lo(p).a,lo(p).u)}</td><td><select class="i" style="margin:0;padding:4px" onchange="P[${p.id}].st=this.value">${["Available","Limited","Region-limited","Unavailable"].map(s=>`<option ${s==p.st?"selected":""}>${s}</option>`).join("")}</select></td></tr>`).join("")}</table></div>`},
+faq:()=>`<h2 class="v">FAQ, policies and contact</h2>${[["Do you sell accounts?","No. We never sell shared, stolen or transferred accounts, passwords, OTPs or recovery codes."],["How do I pay?","Paystack for ₦ (cards, bank transfer) and an international gateway for $. Coming in Stage 5."],["What is your refund policy?","Refund rules are shown at checkout and managed from the admin dashboard."],["How do I contact support?","Use the WhatsApp button, a support ticket or the contact form."]].map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join("")}`};
+function auth(t){const r=t=="Log in";return`<div class="box v" style="max-width:420px;margin:20px auto"><h2 style="margin-top:0">${t}</h2>${r?"":`<label>Full name</label><input class="i" id="an">`}<label>Email</label><input class="i" id="ae" type="email"><label>Password</label><input class="i" id="ap" type="password"><button class="btn" style="width:100%" onclick="doAuth(${r})">${t}</button><p class="nt">Demo only: nothing is saved and passwords are not stored. Real Supabase authentication arrives in Stage 3.</p><a href="#${r?"register":"login"}" style="color:var(--lv)">${r?"New here? Create an account":"Have an account? Log in"}</a></div>`}
+function doAuth(r){const e=$("#ae").value.trim(),p=$("#ap").value;if(!/^\S+@\S+\.\S+$/.test(e))return toast("Enter a valid email");if(p.length<8)return toast("Password needs 8+ characters");user={n:r?e.split("@")[0]:($("#an").value.trim()||"Friend"),e};location.hash="dashboard"}
+function add(i){cart.push({p:i,k:sel});save();toast("Added to cart")}
+function place(a,u){const e=$("#ce").value;if(!/^\S+@\S+\.\S+$/.test(e)||!$("#cn").value.trim())return toast("Enter your name and a valid email");orders.unshift({id:"TM-"+Math.random().toString(36).slice(2,7).toUpperCase(),it:cart.map(c=>P[c.p].n+" — "+P[c.p].k[c.k].n).join(", "),a,u,s:"Pending",p:"Unpaid (demo)"});cart=[];save();user=user||{n:$("#cn").value,e};toast("Demo order created — awaiting payment");location.hash="dashboard";dt="orders"}
+function hs(){q=$("#hq").value;sec=-1;location.hash="shop"}
+function go(){const[r,...a]=(location.hash.slice(1)||"home").split("-"),f=V[r]||V.home;$("#app").innerHTML=f(...a);if(r=="shop")renderList();else if(r=="p"&&a[0]!=window._lp)sel=0;window._lp=a[0];if(r=="p")$("#app").innerHTML=f(...a);$("#cur").innerHTML=["NGN","USD"].map(c=>`<button class="${c==cur?"on":""}" onclick="cur='${c}';go()">${c}</button>`).join("");$("#tabs").innerHTML=[["home","🏠","Home"],["shop","🛍️","Shop"],["cart","🛒","Cart"],["dashboard","👤","Account"]].map(x=>`<a href="#${x[0]}" class="${r==x[0]?"on":""}"><b>${x[1]}</b>${x[2]}${x[0]=="cart"&&cart.length?`<span class="bd">${cart.length}</span>`:""}</a>`).join("")}
+addEventListener("hashchange",()=>{go();scrollTo(0,0)});save();go();
+/* ---- Supabase (live mode: only when config.js provides the PUBLIC url + anon key) ---- */
+const CFG=window.TM_CONFIG||{},CATS=["social","communication","entertainment","dating","business"],ST={available:"Available",limited:"Limited",region_limited:"Region-limited",unavailable:"Unavailable"},cap=s=>s[0].toUpperCase()+s.slice(1);
+async function boot(){
+ if(!CFG.SUPABASE_URL||!CFG.SUPABASE_ANON_KEY)return;
+ try{
+  await new Promise((ok,no)=>{const s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js";s.onload=ok;s.onerror=no;document.head.append(s)});
+  sb=supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY);
+  const{data,error}=await sb.from("products").select("id,name,sort,status,description,categories(slug,name,icon,sort),packages(id,name,price_ngn,price_usd,delivery_time,sort,is_active)").order("sort");
+  if(error)throw error;
+  const KEYS=[/social/,/comm|messag/,/entertain|stream/,/dating/,/business|tool|digital/];
+  const secOf=c=>{c=(Array.isArray(c)?c[0]:c)||{};const t=((c.slug||"")+" "+(c.name||"")).toLowerCase();let i=KEYS.findIndex(re=>re.test(t));if(i<0){i=S.findIndex(x=>x[0]==c.name);if(i<0){S.push([c.name||"Other",c.icon||"🧩"]);i=S.length-1}}else if(c.name)S[i]=[c.name,S[i][1]];return i};
+  P.length=0;data.forEach(r=>P.push({id:P.length,db:r.id,n:r.name,s:secOf(r.categories),h:0,st:ST[r.status]||"Available",d:r.description||"",k:(r.packages||[]).filter(x=>x.is_active).sort((a,b)=>(a.sort||0)-(b.sort||0)).map(x=>({id:x.id,n:x.name,a:+x.price_ngn,u:+x.price_usd,t:x.delivery_time||"—"}))}));
+  cart=cart.filter(c=>P[c.p]&&P[c.p].k[c.k]);save();
+  document.querySelector(".demo").textContent=`Connected to Supabase (test mode): ${P.length} services loaded. Payments are not live until Stage 5.`;
+  await sess();
+ }catch(e){sb=null;console.error(e);toast("Could not reach Supabase — showing demo data")}
+ go();
+}
+async function sess(){const{data:{session}}=await sb.auth.getSession();if(!session){user=null;orders=[];return}
+ const{data:pf}=await sb.from("profiles").select("full_name,role").eq("id",session.user.id).single();
+ user={n:(pf&&pf.full_name)||session.user.email,e:session.user.email,role:pf?pf.role:"customer"};await loadOrders()}
+async function loadOrders(){const{data,error}=await sb.from("orders").select("reference,status,total_ngn,total_usd,order_items(product_name,package_name),payments(status)").order("created_at",{ascending:false});
+ if(error)return toast("Could not load orders");
+ orders=data.map(o=>({id:o.reference,it:o.order_items.map(i=>i.product_name+" — "+i.package_name).join(", "),a:+o.total_ngn,u:+o.total_usd,s:cap(o.status),p:o.payments.some(x=>x.status=="success")?"Paid":"Unpaid"}))}
+const _da=doAuth,_pl=place;
+doAuth=async function(r){if(!sb)return _da(r);const e=$("#ae").value.trim(),p=$("#ap").value;
+ if(!/^\S+@\S+\.\S+$/.test(e))return toast("Enter a valid email");if(p.length<8)return toast("Password needs 8+ characters");
+ const res=r?await sb.auth.signInWithPassword({email:e,password:p}):await sb.auth.signUp({email:e,password:p,options:{data:{full_name:$("#an").value.trim()}}});
+ if(res.error)return toast(res.error.message);
+ if(!res.data.session)return toast("Check your email to confirm, then log in");
+ await sess();location.hash="#dashboard";go()};
+place=async function(a,u){if(!sb)return _pl(a,u);
+ if(!user){toast("Please log in to place an order");location.hash="#login";return}
+ const n=$("#cn").value.trim(),e=$("#ce").value.trim();if(!/^\S+@\S+\.\S+$/.test(e)||!n)return toast("Enter your name and a valid email");
+ const{data,error}=await sb.rpc("create_order",{p_items:cart.map(c=>({package_id:P[c.p].k[c.k].id,qty:1})),p_currency:cur,p_name:n,p_email:e});
+ if(error)return toast(error.message);
+ cart=[];save();await loadOrders();dt="orders";toast("Order "+data+" created — awaiting payment");location.hash="#dashboard";go()};
+async function setSt(j,v){const o=orders[j];if(sb){const{error}=await sb.from("orders").update({status:v.toLowerCase()}).eq("reference",o.id);if(error){toast(error.message);return go()}}o.s=v;toast("Status updated")}
+async function out(){if(sb){await sb.auth.signOut();orders=[]}user=null;location.hash="#home";go()}
+boot();
+</script></body></html>
